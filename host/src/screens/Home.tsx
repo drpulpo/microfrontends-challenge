@@ -3,8 +3,12 @@ import ReactDOM from "react-dom";
 
 import { Wrapper } from "./styles";
 
-export const Home = () => {
-  const lang='en';
+type HomeProps = {
+  lang:string
+}
+
+export const Home = (props:HomeProps) => {
+  const {lang} = props;
   return(
       <Wrapper>
         <div className="wrapper__welcome">

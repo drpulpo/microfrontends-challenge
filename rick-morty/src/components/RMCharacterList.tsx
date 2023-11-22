@@ -4,8 +4,12 @@ import { useRickMortyCharacters } from "../hooks/useRickMortyCharacters";
 
 import {CardList,Card} from './styles'
 
+type RMCharacterListProps = {
+  lang:string
+}
 
-export const RMCharacterList = (lang:string) => {
+export const RMCharacterList = (props:RMCharacterListProps) => {
+  const {lang} = props;
   const {rickMortyCharacters,fetchRickMortyCharacters} = useRickMortyCharacters();
   useEffect(()=>{
     fetchRickMortyCharacters()

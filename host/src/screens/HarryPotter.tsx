@@ -4,10 +4,15 @@ import ReactDOM from "react-dom";
 // @ts-ignore
 import {HPCharacterList} from "HPComponents/HPCharacterList";
 
-export const HarryPotter = () => {
+type HarryPotterProps={
+  lang:string
+}
+
+export const HarryPotter = (props:HarryPotterProps) => {
+  const {lang} = props;
   return(<div>
       <div>
-        <HPCharacterList/>
+        <HPCharacterList lang={lang}/>
       </div>
 </div>);
 };

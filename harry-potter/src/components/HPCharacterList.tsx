@@ -4,7 +4,12 @@ import { useHarryPotterCharacters } from "../hooks/useHarryPotterCharacters";
 
 import {CardList,Card} from './styles'
 
-export const HPCharacterList = (lang:string) => {
+type HPCharacterListProps = {
+  lang:string
+}
+
+export const HPCharacterList = (props:HPCharacterListProps) => {
+  const {lang} = props;
   const {harryPotterCharacters,fetchHarryPotterCharacters} = useHarryPotterCharacters();
   useEffect(()=>{
     fetchHarryPotterCharacters()
