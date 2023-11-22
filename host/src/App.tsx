@@ -22,8 +22,8 @@ const App = () => (
         <div className="app__routes">
           <Routes>
               <Route path="/" Component={Home} />
-              <Route path="/rickmorty" Component={RickMorty}/>
               <Route path="/harrypotter" Component={HarryPotter}/>
+              <Route path="/rickmorty" Component={RickMorty}/>
           </Routes>
         </div>
         <div className="app__footer">

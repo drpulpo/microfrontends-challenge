@@ -25,12 +25,14 @@ export const Card = styled.div`
     &__imagediv {
       height: 210px;
       width: 160px;
-      items-align:center;
-      justify-conten:center; 
+      align-items:center;
+      display:flex;
+      justify-content:center; 
     }
 
     &__image {
-      height: 200px; 
+      width: 150px;
+      height: 150px;
       border-radius:15px;
     }
 

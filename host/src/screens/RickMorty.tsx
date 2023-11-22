@@ -7,9 +7,6 @@ import {RMCharacterList} from "RMComponents/RMCharacterList";
 export const RickMorty = () => {
   return(<div>
       <div>
-        Rick Morty
-      </div>
-      <div>
         <RMCharacterList/>
       </div>
 </div>);

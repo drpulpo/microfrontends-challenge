@@ -2,19 +2,26 @@ import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { useRickMortyCharacters } from "../hooks/useRickMortyCharacters";
 
-export const RMCharacterList = () => {
+import {CardList,Card} from './styles'
+
+
+export const RMCharacterList = (lang:string) => {
   const {rickMortyCharacters,fetchRickMortyCharacters} = useRickMortyCharacters();
   useEffect(()=>{
     fetchRickMortyCharacters()
   },[])
-  return <div>{rickMortyCharacters?.map((character,index)=>{
+  return <CardList>{rickMortyCharacters?.map((character,index)=>{
     return (
-    <div key={index}>
-      <div><img src={character.image} alt="new"/></div>
+    <Card key={index}>
+      <div className="card__imagediv">
+        <img className="card__image" src={character.image} alt="new"/>
+      </div>
       <div>
+        <div>{lang==='es'?'Nombre:':'Name:'}</div>
         <div>{character.name}</div>
+        <div>{lang==='es'?'Especie:':'Specie:'}</div>
         <div>{character.species}</div>
       </div>
-    </div>)
-  })}</div>;
+    </Card>)
+  })}</CardList>;
 };

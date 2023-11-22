@@ -7,7 +7,6 @@ export const useHarryPotterCharacters = () => {
 
     const fetchHarryPotterCharacters = async () => {
         const rmCharacters = await getHarryPotterCharacters();
-        console.log(rmCharacters)
         setHarryPotterCharacters((rmCharacters as Character[]).slice(0, 10) );
     }
 
