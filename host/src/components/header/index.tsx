@@ -17,13 +17,15 @@ export const Header= ()=>{
         <div className="header__brand">{lang==='es'?'Personajes':'Characters'}</div>
         <nav className="header__nav">
             <div>
-                <Link to={"/"}>{lang==='es'?'Inicio':'Home'}</Link>
-            </div>
-            <div>
-                <Link to={"/harrypotter"}>Harry Potter</Link>
-            </div>
-            <div>
-                <Link to={"/rickmorty"}>Rick & Morty</Link>
+                <div>
+                    <Link to={"/"}>{lang==='es'?'Inicio':'Home'}</Link>
+                </div>
+                <div>
+                    <Link to={"/harrypotter"}>Harry Potter</Link>
+                </div>
+                <div>
+                    <Link to={"/rickmorty"}>Rick & Morty</Link>
+                </div>
             </div>
             <div>
                 <select value={lang} onChange={(e)=>{

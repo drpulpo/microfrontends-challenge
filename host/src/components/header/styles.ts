@@ -22,12 +22,16 @@ export const StyledHeader = styled.header`
     
     &__nav {
       display:flex;
-      flex-direction:horizontal;
+      flex-direction:row;
+      text-align:center;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
       color:white;
       font-family: system-ui;
       font-size: x-large;
       font-weight: 100;
-      gap:50px;
+      gap:10px;
     }
     &__nav a:-webkit-any-link {
       text-decoration: none;
