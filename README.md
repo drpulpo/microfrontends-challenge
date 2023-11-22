@@ -26,6 +26,11 @@ npm run build <br />
 npm run build:start <br />
 (This will start the Host application at 8080 port) <br />
 
+Open the Browser and navigate to 
+http://localhost:8080/
+
+
+
 What is accessibility? How do you achieve it?
 ● What is the difference between session storage, local storage, and cookies?
 Session storage, local storage, and cookies are all mechanisms for storing data on a user's computer.
